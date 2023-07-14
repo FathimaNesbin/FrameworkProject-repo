@@ -44,7 +44,7 @@ public class merchantOnboarding {
 
 //        Failsafe.with(retry).run(()->
 //        Assert.assertEquals(response.getStatusCode(),200));
-        Assert.assertEquals(response.getStatusCode(),300);
+        Assert.assertEquals(response.getStatusCode(),200);
 
         properties.token = response.jsonPath().getString("token.idToken");
         logger.info("-----User SignUp is complete------");
