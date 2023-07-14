@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite1">
+    <listeners>
+
+        <listener class-name="api.utils.listeners.Setup"/>
+        <listener class-name="api.utils.listeners.AnnotationTransformer"/>
+
+    </listeners>
+    <test verbose="2" preserve-order="true" name="/home/nesbin/IdeaProjects/FrameWorkProject/src/test/java/testCases">
+        <classes>
+            <class name="testCases.merchantOnboarding">
+                <methods>
+                    <include name="testUserSignup"/>
+                    <include name="testGetMerchantDetails"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>

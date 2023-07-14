@@ -1,0 +1,60 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--&lt;!&ndash; Extra logging related to initialization of Log4j.-->
+<!-- Set to debug or trace if log4j initialization is failing. &ndash;&gt;-->
+<!--<Configuration status="WARN">-->
+<!--    <Properties>-->
+<!--        <Property name="basePath">/home/nesbin/IdeaProjects/FrameWorkProject/logs</Property>-->
+<!--    </Properties>-->
+<!--    <Appenders>-->
+<!--        &lt;!&ndash; Console appender configuration &ndash;&gt;-->
+<!--        <Console name="Console" target="SYSTEM_OUT">-->
+<!--            <PatternLayout pattern="%d{HH:mm:ss.SS} [%t] %-5level %logger{36} - %msg%n" />-->
+<!--        </Console>-->
+
+<!--        <RollingFile name="File" fileName="${basePath}/automation.log" filePattern ="%d{HH:mm:ss.SS} [%t] %-5level %logger{36} - %msg%n">-->
+<!--        <PatternLayout pattern="%d{HH:mm:ss.SS} [%t] %-5level %logger{36} - %msg%n"/>-->
+<!--        <SixeBasedTriggeringPolicy size="50000"/>-->
+<!--        </RollingFile>-->
+<!--    </Appenders>-->
+<!--    <Loggers>-->
+<!--        &lt;!&ndash; Root logger referring to console appender &ndash;&gt;-->
+<!--        <Root level="debug" >-->
+<!--            <AppenderRef ref="File" />-->
+<!--        </Root>-->
+<!--    </Loggers>-->
+<!--</Configuration>-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+<Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+        <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+    </Console>
+    <File name="MyFile" fileName="/src/logs"  immediateFlush="false" append="false">
+        <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </File>
+</Appenders>
+<Loggers>
+    <Root level="debug">
+        <AppenderRef ref="Console" />
+        <AppenderRef ref="MyFile"/>
+    </Root>
+</Loggers>
+</Configuration>
+<!--        <?xml version="1.0" encoding="UTF-8"?>-->
+<!--<Configuration status="INFO">-->
+<!--<Appenders>-->
+<!--    <Console name="Console" target="SYSTEM_OUT">-->
+<!--        <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />-->
+<!--    </Console>-->
+<!--    <File name="MyFile" fileName="log/test-log.log"  immediateFlush="false" append="false">-->
+<!--        <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>-->
+<!--    </File>-->
+<!--</Appenders>-->
+<!--<Loggers>-->
+<!--    <Root level="debug">-->
+<!--        <AppenderRef ref="Console" />-->
+<!--        <AppenderRef ref="MyFile"/>-->
+<!--    </Root>-->
+<!--</Loggers>-->
+<!--</Configuration>-->

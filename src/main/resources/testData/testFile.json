@@ -1,0 +1,12 @@
+{
+    "phone":"",
+    "otp": "1234",
+    "authenticateDevice": false,
+    "appsFlyerId": "",
+    "timezone": "",
+    "device": "",
+    "ipAddress": "",
+    "androidId": "",
+    "isPhysical": false,
+    "appVersion": ""
+}

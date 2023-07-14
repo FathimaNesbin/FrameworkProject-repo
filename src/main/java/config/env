@@ -1,0 +1,6 @@
+environment = "stg"
+user_sign_up = base_uri+"/v1/auth/sign-up";
+merchant_details = base_uri+"/v1/merchants/teams";
+merchant_onboarding = base_uri+"/v2/merchants/onboarding/basic-details";
+
+
